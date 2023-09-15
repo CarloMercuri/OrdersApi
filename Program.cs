@@ -1,7 +1,13 @@
+using OrdersApi.Authentication.Interfaces;
 using OrdersApi.Data.Database.DataQueries;
 using OrdersApi.Data.Database.Interfaces;
 using OrdersApi.Encryption;
 using OrdersApi.Encryption.Interfaces;
+using OrdersApi.Security.Authentication;
+using OrdersApi.Security.Authorization;
+using OrdersApi.Security.Authorization.Interfaces;
+using OrdersApi.Security.Database;
+using OrdersApi.Security.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +25,10 @@ builder.Services.AddSwaggerGen();
 // Encryption
 builder.Services.AddSingleton<IEncryptionProcessor, CEncryptionProcessor>();
 builder.Services.AddSingleton<IEncryptionAgent, CEncryptor>();
+builder.Services.AddSingleton<IAuthenticatorProcess, AuthenticationProcessor>();
+builder.Services.AddSingleton<ISecurityDatabaseConnections, SecurityDatabaseConnection>();
+builder.Services.AddSingleton<ISecurityDatabaseQueries, SecurityDatabaseQueries>();
+builder.Services.AddSingleton<IAuthorizationProcessor, AuthorizationProcessor>();
 
 // Database
 builder.Services.AddSingleton<IDatabaseConnection, DatabaseConnection>();

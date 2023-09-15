@@ -44,15 +44,17 @@ namespace OrdersApi.Encryption
             return saltBytes;
         }
 
-        // NOT REFACTORED YET
-
-        public string HashAccessToken(string token)
+        public string CreateAccessToken()
         {
-            using (HashAlgorithm algorithm = SHA256.Create())
-                return Convert.ToBase64String(algorithm.ComputeHash(Encoding.UTF8.GetBytes(token)));
+            return GenerateBase64Token();
         }
 
-        public string GenerateBase64Accesstoken()
+        public string CreateRefreshToken()
+        {
+            return GenerateBase64Token();
+        }
+
+        private string GenerateBase64Token()
         {
             var tokenBytes = new byte[AuthTokenSize];
 
@@ -64,6 +66,13 @@ namespace OrdersApi.Encryption
             return Convert.ToBase64String(tokenBytes);
         }
 
+        // NOT REFACTORED YET
+
+        public string HashAccessToken(string token)
+        {
+            using (HashAlgorithm algorithm = SHA256.Create())
+                return Convert.ToBase64String(algorithm.ComputeHash(Encoding.UTF8.GetBytes(token)));
+        }
         
     }
 }

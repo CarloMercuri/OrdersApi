@@ -4,5 +4,7 @@
     {
         string HashPassword(string password, string salt);
         string GenerateSalt();
+        string CreateAccessToken();
+        string CreateRefreshToken();
     }
 }

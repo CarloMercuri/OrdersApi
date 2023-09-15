@@ -10,6 +10,16 @@ namespace OrdersApi.Encryption
             _encryptor = encryptor;
         }
 
+        public string CreateAccessToken()
+        {
+            return _encryptor.CreateAccessToken();
+        }
+
+        public string CreateRefreshToken()
+        {
+            return _encryptor.CreateRefreshToken();
+        }
+
         /// <summary>
         /// Use for FIRST TIME hashing of password, for storage. Returns the hashed password and the salt used.
         /// </summary>

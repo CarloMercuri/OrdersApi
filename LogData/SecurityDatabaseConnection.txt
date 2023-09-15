@@ -1,0 +1,24 @@
+2023-09-15 09:59:41  Exception while executing non query: 'INSERT INTO UserData (user_name, user_email, password_hash, user_salt, last_login) VALUES (@userName, @email, @hash, @salt, @lastLogin)' 
+ With parameters: @userName: ghgh@email: hfg@hash: mBZMf1Ny91nDy++6YOen6vTLPnWbeJMXEIQlq5n1tgJdyA1qHrs07oj4W0a60fTl9+zLqS1k1CwJpeJBC5TOfYef9LRiIKPH1K/QFcWCxC3S2CrbQXoTSuz+AAvbyJ2HyJaCnl7jbpvP33VrhS5SWjh/GQV/1u0PVE17+GISLKc=@salt: y8DeZKSLSOB3Xgs6uEiIBhuGUli3+LvUA3E1a8LpXlQSC40H0pUd8/XKOZwKSXcQWppNQxl8LFO3G2H3kxxnWLKqFBsR0n5ulOK8PCRheKZLLoyKlAwM2aNSeMNJFsYCphwRMo0wxUQhMxdOJ/nUoWqEepIg+01SylVvPxeyg4g=@lastLogin: 15-09-2023 09:56:22 
+ Exception message: The ConnectionString property has not been initialized.
+2023-09-15 10:02:23  Exception while executing non query: 'INSERT INTO UserData (user_name, user_email, password_hash, user_salt, last_login) VALUES (@userName, @email, @hash, @salt, @lastLogin)' 
+ With parameters: @userName: fdgdfg@email: fdgfd@hash: 9xqO0pqKbN+09WuHdOO7pxQRHPLoW1ME8F02J3UgAJ6WiVjZSjK7iW4GiSeTTg510lneDBpXhUryI54dXu1E3xAwhUhFLb18ZaJrK5p1PNZPKwuEgyk7W3BfHe/hyWAlYhlgXK3IbqhjgzNAeC0Vm64tj1mSOclb8GXmsnYtLEk=@salt: G2/WU98LXPJaGKWleKLlYJwKqlUgJAZx658Ns8MbZMQiRYeAJQYi+3IHJp8FIiVdpDwDIIkfCFqge8F4YnAdEkr+G3bx7V88rHoK54kad7Pax5xZSDvveNcDm+exloNJ+dFW9sLIrKUuNcKI5bVYpcEmb4UDz9fN7DTEgpesjjU=@lastLogin: 15-09-2023 10:00:24 
+ Exception message: The ConnectionString property has not been initialized.
+2023-09-15 10:02:32  Exception while executing query: 'SELECT user_id FROM UserData WHERE user_email = @email' 
+ With parameters: @email: fdgfd 
+ Exception message: The ConnectionString property has not been initialized.
+2023-09-15 10:03:31  Exception while executing non query: 'INSERT INTO UserData (user_name, user_email, password_hash, user_salt, last_login) VALUES (@userName, @email, @hash, @salt, @lastLogin)' 
+ With parameters: @userName: 555@email: lll@hash: pTfGSQSBaV8D+ClyQbJIQuHyCf9H4SEdNwlQNCR84bu/q64pgy2Q8/yvjprLKEJuFeXAldRupGW1VZZtB2M15tKIsMUaMZC+Mbu8JsRP98Qh67zK6vgjZ4Ed2yLTGC2Ny5obQ0WTxpXKXT48q+ESHK/Ooke+BOqv1jCGUUW3lkY=@salt: 8XqmHHYdX8RGMV4ibeLJgwBHzH4/upMIYxpnehEoYIL/2A+0eC0b8rDEqFv8otcIWHUVmdsS0zjER2guEVfIrMQDWk8TxaOik1VSeeFWajpnp6K3dg//8MToloUpbY5Qa4d9sGYeqeiAc+lq4GeFiavrnECFADsTtjKctXW7NgY=@lastLogin: 15-09-2023 10:03:25 
+ Exception message: The ConnectionString property has not been initialized.
+2023-09-15 10:17:13  Exception while executing non query: 'INSERT INTO UserData (user_name, user_email, password_hash, user_salt, last_login) VALUES (@userName, @email, @hash, @salt, @lastLogin)' 
+ With parameters: @userName: ewgr@email: erg@hash: eZNmGxFvn3LqLj8aziVEN4sa+Kdic/+Grh2kRKc8JiNfIh7E1nHBfsPEK6dFnIAJ0ET8Cf3K30uOIS8lLTugRq/CHoSSzebfZ3hWg72+taXWJKf8UtdUe7DoaWO/D4SR8m1nYba6xQvkyu8C7BO1QOl6uYtzpeXYvIljYtJR1Vs=@salt: kv4piZxQtkmV8vT+en0lKhk6MMA70cWW0Ne6jafuxQwdwsWYx2SlIdE7Kukogex2jjLTBvdy0EMunqZI6C1Nt64g9nAX3sqBaTe9dawmY1i19iwg6VtcJ0XoGlBDZqBpIchoiBuCrS/quT1o0OZZaRdUuIxiXGwKnUCZJC+ESrs=@lastLogin: 15-09-2023 10:16:33 
+ Exception message: String or binary data would be truncated in table 'Orders.dbo.UserData', column 'password_hash'. Truncated value: 'eZNmGxFvn3LqLj8aziVEN4sa+Kdic/+Grh2kRKc8JiNfIh7E1nHBfsPEK6dFnIAJ0ET8Cf3K30uOIS8lLTugRq/CHoSSzebfZ3hW'.
+The statement has been terminated.
+2023-09-15 11:47:07  Exception while executing non query: 'INSERT INTO UserData (user_name, user_email, password_hash, user_salt, last_login) VALUES (@userName, @email, @hash, @salt, @lastLogin)' 
+ With parameters: @userName: ss@email: ca@hash: r2uxtLdwEU++yq60Ide6ZEW22ezh4Dn1QwvgDQKyfEKuHQmSwWvab3x+gZtibmVTENDjeIRD2HHdZqNDDVbGFRFAleKkg/+LzAWHEc/HB1I2YNaOX8szqxFuHRHXoX3dGmHfqaETpb9/5TQrVZcEy4Gu+oxzEEBxYR26NvgsH58=@salt: C+sg03mxtaDaatQbQNTWjkQJrM8GNYxGyIGZJT8icKIZdj2I0GshlGM4AnKGA15Ce6WCvArlKGwmeiWXgSneMMqnY+MMPArfcFwbhvz5QKcjCZuTIN9wzBq33AO2uDcjI5Nw+/8s+3RgwglirTg2MV1wpg5cTWP8SInK6VM+ZcQ=@lastLogin: 15-09-2023 11:45:52 
+ Exception message: Violation of UNIQUE KEY constraint 'UQ__UserData__7C9273C4C83A664F'. Cannot insert duplicate key in object 'dbo.UserData'. The duplicate key value is (ss).
+The statement has been terminated.
+2023-09-15 11:48:08  Exception while executing non query: 'INSERT INTO access_tokens (token_type, token_uuid, user_id, expiration_datetime) VALUES (@tokenType, @tokenUuid, @userId, @expiration)' 
+ With parameters: @tokenType: 0@tokenUuid: /yHhagz8hKSCaZJqo2edDEjf/sIWwa6fy3CyxpEHVmetfImXePp8gXEwbr0Z8YjxZOQjLFEQd1aRNUBMh5hdWivS3L3GsPq6QCTAkqOTFrHtmr2i6wiUmRi+gTNrabrElXWbZpkaEGQ/DElLoYVEuwFfIua3V2X2Ei3lSFHM3z4=@userId: 4@expiration: 15-09-2023 12:47:24 
+ Exception message: String or binary data would be truncated in table 'Orders.dbo.access_tokens', column 'token_uuid'. Truncated value: '/yHhagz8hKSCaZJqo2edDEjf/sIWwa6fy3CyxpEHVmetfImXePp8gXEwbr0Z8Yjx'.
+The statement has been terminated.
