@@ -2,7 +2,7 @@
 
 namespace OrdersApi.Security.Authorization.Interfaces
 {
-    internal interface IAuthorizationProcessor
+    public interface IAuthorizationProcessor
     {
         AccountLoginResult UseRefreshToken(string refreshToken);
         UserData AuthorizeUser(string accessToken);

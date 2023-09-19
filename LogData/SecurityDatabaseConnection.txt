@@ -22,3 +22,22 @@ The statement has been terminated.
  With parameters: @tokenType: 0@tokenUuid: /yHhagz8hKSCaZJqo2edDEjf/sIWwa6fy3CyxpEHVmetfImXePp8gXEwbr0Z8YjxZOQjLFEQd1aRNUBMh5hdWivS3L3GsPq6QCTAkqOTFrHtmr2i6wiUmRi+gTNrabrElXWbZpkaEGQ/DElLoYVEuwFfIua3V2X2Ei3lSFHM3z4=@userId: 4@expiration: 15-09-2023 12:47:24 
  Exception message: String or binary data would be truncated in table 'Orders.dbo.access_tokens', column 'token_uuid'. Truncated value: '/yHhagz8hKSCaZJqo2edDEjf/sIWwa6fy3CyxpEHVmetfImXePp8gXEwbr0Z8Yjx'.
 The statement has been terminated.
+2023-09-18 10.23.14  Exception while executing non query: 'INSERT INTO UserData (user_name, user_email, password_hash, user_salt, last_login) VALUES (@userName, @email, @hash, @salt, @lastLogin)' 
+ With parameters: @userName: cme@email: ce@hash: Iny8D+FY10k2mDM6zFQL47FM9b2RrhaPCxUKV74tlgeQc/o3ftWYs12WJf8De7RKNtBrGnwo5g9OO7CyiAOl0JGWXqlgeTEnjeJ910WrSNPXCFA13NEOm4w0FRXPp2MtqpRZwudAjkcJwNfDMxnePu2/CY6o/JlP0/BPsFm77Oo=@salt: wXIyEJZ1bggY34dPPhFyXFv8JLKB62Yvj7GVei8MGPTKuEZtGAgVg5gl3ODjo/6Nq8+8sKgkJIm8RlzhizehVnkHVTj69+bkfHi6Sr5X7TnrvtRsb4+OXu+ll7PtIc483Vooiq2lmm9KIWxhhvSgRAyy1t4cJiGEjbdSa9NXeJM=@lastLogin:  
+ Exception message: The parameterized query '(@userName nvarchar(3),@email nvarchar(2),@hash nvarchar(172),@s' expects the parameter '@lastLogin', which was not supplied.
+2023-09-18 10.24.58  Exception while executing non query: 'INSERT INTO UserData (user_name, user_email, password_hash, user_salt, last_login) VALUES (@userName, @email, @hash, @salt, @lastLogin)' 
+ With parameters: @userName: cme@email: ce@hash: Y7bOYdH7Y9WvJYI0T59eI4CwWHyyv1oBqWvbfU970aJmgmTneQfXqF5kWGYat8/PGSyaY6OkLujpYu6BGD6f0wsWvcW0d/6p5jKArbT4SiwwK8YAhznK1qtbfABVtQxfShmcLeh8GBkM+lTLOCOW0l43j0ii5QvG+YyxvFSPp3g=@salt: chb3bq5Vodavd4HoZ5M7PQ3SVeMKx/hctSibMewCwgr8cTjfDK7FKdSC8zK6oY1I+Qq1QKd2SDcNywX2d0R/7ggOpLq0vakLFkB6Nifb38nQcjGaMd7n1RrfGQx8jyN7OSKto3Eo9u7eHDtBlxSqHv1rSH7/Ef5B9BBc3Gh/REs=@lastLogin:  
+ Exception message: Invalid column name 'password_hash'.
+Invalid column name 'user_salt'.
+Invalid column name 'last_login'.
+2023-09-18 10.32.06  Exception while executing non query: 'INSERT INTO UserData (user_name, user_email, password_hash, user_salt, last_login) VALUES (@userName, @email, @hash, @salt, @lastLogin)' 
+ With parameters: @userName: cme@email: ce@hash: sHS6gNsdsFz4gy99azZ3J2KEGMlQuSCb+07d0J7HWCqrsWQqBMKpm2px9utglMqWJMHu8T6UC5QCIBZham10VRFhXtZUO2prF1jrUTgROdtT7C2zy2Cp07A6JrFzertnkDxKX8TRQYt6WJDwvnRyfczX3sIYSjTu4dNekxMiyi8=@salt: E6VsOVNhghgErw9hNfUsYl3baNbe0FxA9+S0NDh6oCgLn1nqSVHe17vTvkEutpuhvSohPE9LsKuzJMqSIT5L8HMTfYOFOZTXiuAxjSMFBaZfIH0ckkEpiUDug4kqkKsznvl+3xFvlbcCa3Y8ul5GxHiBDJCi7fH5fOu3IQj9xxk=@lastLogin:  
+ Exception message: Invalid column name 'password_hash'.
+Invalid column name 'user_salt'.
+Invalid column name 'last_login'.
+2023-09-18 10.32.42  Exception while executing non query: 'INSERT INTO access_tokens (token_type, token_uuid, user_id, expiration_datetime) VALUES (@tokenType, @tokenUuid, @userId, @expiration)' 
+ With parameters: @tokenType: 0@tokenUuid: ETON0rX8Py30u7PP9qzU2HWtqQQXGWU0ssfEWlTe4dzSQyGc7DC7IRnM5+qfqCfhP7NydvQ+H7eU8J8JxQYnBAYN/fATWn0x42lgwoLNX3we6k9p+nV3o63Hh/79tSA57BktCzF9KKOUF3x1k/anDadgOzbUVo8FIBvHpJBCDLk=@userId: 1@expiration: 18/09/2023 11.32.42 
+ Exception message: Invalid column name 'token_type'.
+2023-09-18 10.37.04  Exception while executing non query: 'INSERT INTO access_tokens (token_type, token_uuid, user_id, expiration_datetime) VALUES (@tokenType, @tokenUuid, @userId, @expiration)' 
+ With parameters: @tokenType: 0@tokenUuid: olMX6M7gzLKLpyMHCzAKTKNeCK5UMxltJuicVar3rpQxE6zqfMamiRhz9g9muEmOSALt6SyDhV7zpAlY8lmK8MpjLNUiKWHw0FRodgV6C9T4yibGfgIts4SAIFXh0XXVounbx4bCNArcnPoqCHqpr01b+53ReS2zvzKr/3B+LuQ=@userId: 1@expiration: 18/09/2023 11.33.33 
+ Exception message: Invalid column name 'token_type'.

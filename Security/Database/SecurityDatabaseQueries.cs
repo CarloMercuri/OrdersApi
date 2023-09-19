@@ -62,16 +62,16 @@ namespace OrdersApi.Security.Database
 
                 // Get user data  + role
 
-                UserData details = new UserData();
+                //UserData details = new UserData();
 
-                details. = _utilities.FetchAsString(queryResponse.Rows[0]["user_id"]);
-                details.UserName = _utilities.FetchAsString(queryResponse.Rows[0]["user_name"]);
-                details.Email = _utilities.FetchAsString(queryResponse.Rows[0]["user_email"]);
-                details.PasswordHash = _utilities.FetchAsString(queryResponse.Rows[0]["password_hash"]);
-                details.Salt = _utilities.FetchAsString(queryResponse.Rows[0]["user_salt"]);
-                details.LastLogin = _utilities.FetchAsDateTime(queryResponse.Rows[0]["last_login"], DateTime.Now);
+                //details. = _utilities.FetchAsString(queryResponse.Rows[0]["user_id"]);
+                //details.UserName = _utilities.FetchAsString(queryResponse.Rows[0]["user_name"]);
+                //details.Email = _utilities.FetchAsString(queryResponse.Rows[0]["user_email"]);
+                //details.PasswordHash = _utilities.FetchAsString(queryResponse.Rows[0]["password_hash"]);
+                //details.Salt = _utilities.FetchAsString(queryResponse.Rows[0]["user_salt"]);
+                //details.LastLogin = _utilities.FetchAsDateTime(queryResponse.Rows[0]["last_login"], DateTime.Now);
 
-                return details;
+                return null;
             }
             catch (Exception ex)
             {
@@ -113,7 +113,7 @@ namespace OrdersApi.Security.Database
                                                                   new SqlParameter("@email", email),
                                                                   new SqlParameter("@hash", hashedPassword),
                                                                   new SqlParameter("@salt", salt),
-                                                                  new SqlParameter("@lastLogin", DateTime.Now));
+                                                                  new SqlParameter("@lastLogin", DBNull.Value));
 
                 return response > 0;
             }

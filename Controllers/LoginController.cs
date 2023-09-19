@@ -69,7 +69,8 @@ namespace OrdersApi.Controllers
                     return BadRequest("Refresh token missing.");
                 }
 
-
+                // TEMP
+                return Ok();
 
             }
             catch (Exception ex)

@@ -13,6 +13,6 @@ namespace OrdersApi.Security.Interfaces
         bool InsertAccessToken(string token, string user_id, DateTime expiration);
         bool InsertRefreshToken(string token, string user_id, DateTime expiration);
         TokenData GetTokenData(string token);
-        UserData GetUserData(int user_id);
+        //UserData GetUserData(int user_id);
     }
 }

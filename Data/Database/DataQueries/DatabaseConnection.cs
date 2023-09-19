@@ -9,12 +9,14 @@ namespace OrdersApi.Data.Database.DataQueries
     public class DatabaseConnection : IDatabaseConnection
     {
         protected readonly IConfiguration Configuration;
-        protected SqlConnection _connection;
+        protected SqlConnection _connection
+        {
+            get { return GetSqlConnection(); }
+        }
 
         public DatabaseConnection(IConfiguration configuration)
         {
             Configuration = configuration;
-            _connection = GetSqlConnection();
         }
 
         private SqlConnection GetSqlConnection()
