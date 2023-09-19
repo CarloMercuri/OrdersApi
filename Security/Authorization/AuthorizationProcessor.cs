@@ -31,6 +31,11 @@ namespace OrdersApi.Security.Authorization
 
         }
 
+        public TokenData GetTokenData(string token)
+        {
+            return _dbQueries.GetTokenData(token);
+        }
+
         public AccountLoginResult UseRefreshToken(string refreshToken)
         {
             throw new NotImplementedException();

@@ -125,10 +125,12 @@ namespace OrdersApi.Security.Database
 
         //
         // TOKENS
-        //
+        // 
 
         public TokenData GetTokenData(string token)
         {
+            TokenData tokenData = new TokenData();
+
             try
             {
                 string query = "SELECT token_type, user_id, expiration_datetime FROM access_tokens WHERE token_uuid = @token";
@@ -137,17 +139,34 @@ namespace OrdersApi.Security.Database
 
                 if (queryResponse.Rows.Count > 0)
                 {
-                    TokenData data = new TokenData();
-                    data.Type = (TokenType)_utilities.FetchAsInt32(queryResponse.Rows[0]["token_type"]);
-                    data.UserID = _utilities.FetchAsInt32(queryResponse.Rows[0]["user_id"]);
-                    data.Expiration = _utilities.FetchAsDateTime(queryResponse.Rows[0]["expiration_datetime"], DateTime.Now.AddDays(-5));
-
-                    return data;
+                    tokenData.Type = (TokenType)_utilities.FetchAsInt32(queryResponse.Rows[0]["token_type"]);
+                    tokenData.UserID = _utilities.FetchAsInt32(queryResponse.Rows[0]["user_id"]);
+                    tokenData.Expiration = _utilities.FetchAsDateTime(queryResponse.Rows[0]["expiration_datetime"], DateTime.Now.AddDays(-5));
                 }
                 else
                 {
                     return null;
                 }
+
+                // Get rate limits
+                string rateLimitsQuery = "SELECT requests_remaining, max_requests_per_period, period_seconds, period_end " +
+                               "FROM access_tokens_rate_limits WHERE token_uuid = @token";
+
+                DataTable rateLimitsResponse = _db.ExecuteQuery(rateLimitsQuery, new SqlParameter("@token", token));
+
+                if(rateLimitsResponse.Rows.Count > 0)
+                {
+                    TokenRateLimits limit = new TokenRateLimits();
+                    limit.RequestsRemaining = _utilities.FetchAsInt32(rateLimitsResponse.Rows[0]["requests_remaining"]);
+                    limit.MaxRequestsPerPeriod = _utilities.FetchAsInt32(rateLimitsResponse.Rows[0]["max_requests_per_period"]);
+                    limit.PeriodSeconds = _utilities.FetchAsInt32(rateLimitsResponse.Rows[0]["period_seconds"]);
+                    limit.PeriodEnd = _utilities.FetchAsDateTime(rateLimitsResponse.Rows[0]["period_end"], DateTime.Now.AddDays(-5));
+
+                    tokenData.RateLimits = limit;
+                }             
+     
+
+                return tokenData;
             }
             catch (Exception ex)
             {
