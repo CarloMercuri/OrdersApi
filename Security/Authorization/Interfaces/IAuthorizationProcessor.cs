@@ -8,5 +8,6 @@ namespace OrdersApi.Security.Authorization.Interfaces
         AccountLoginResult UseRefreshToken(string refreshToken);
         UserData AuthorizeUser(string accessToken);
         TokenData GetTokenData(string token);
+        void AdjustTokenRates(TokenData tokenData);
     }
 }

@@ -17,6 +17,11 @@ namespace OrdersApi.Security.Authorization
             _dbQueries = dbQueries;
         }
 
+        public void AdjustTokenRates(TokenData tokenData)
+        {
+
+        }
+
         public UserData AuthorizeUser(string accessToken)
         {
             TokenData token =  _dbQueries.GetTokenData(accessToken);
